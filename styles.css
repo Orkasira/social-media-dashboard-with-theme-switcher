@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  margin: auto;
+  font-family: "Inter";
+  background-color: #FFFFFF;
+}
+body .background {
+  background-color: #F7F9FF;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+body .weight-names {
+  color: #1D1F29;
+}
+body .dark-name {
+  color: #63687D;
+}
+body .container {
+  width: 80%;
+  margin: auto;
+}
+body .container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  padding-top: 36px;
+  margin-right: 50px;
+}
+body .container header .title p {
+  margin-top: 3px;
+  font-weight: 700;
+  font-size: 14px;
+}
+body .container header .dark-mode-circle {
+  display: flex;
+  gap: 10px;
+}
+body .container header .dark-mode-circle .dark-mode-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: #848BAB;
+}
+body .container header .switch input {
+  display: none;
+}
+body .container header .switch input:checked + .slider {
+  background: linear-gradient(#40DB82, #388FE7);
+}
+body .container header .switch input:checked + .slider:before {
+  transform: translateX(15px);
+}
+body .container header .switch .slider {
+  width: 40px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body .container header .switch .slider::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  transition: 0.4s;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+body .container main .card {
+  background-color: #F1F3FA;
+  padding: 20px;
+  border-radius: 10px;
+  width: 255px;
+  text-align: center;
+  transition: background 0.3s;
+  overflow: hidden;
+}
+body .container main .card:hover {
+  background-color: #E1E4F0;
+}
+body .container main .stats {
+  display: flex;
+  gap: 68px;
+  flex-wrap: wrap;
+  margin-top: 46px;
+}
+body .container main .stats .card {
+  height: 216px;
+}
+body .container main .stats .card .positive {
+  margin-top: 30px;
+  color: green;
+}
+body .container main .stats .card .negative {
+  margin-top: 30px;
+  color: red;
+}
+body .container main .stats .card .logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+body .container main .stats h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-top: 28px;
+  margin-bottom: 9px;
+}
+body .container main .stats .facebook {
+  border-top: solid #178FF5 5px;
+}
+body .container main .stats .twitter {
+  border-top: solid #1DA1F2 5px;
+}
+body .container main .stats .instagram {
+  position: relative;
+}
+body .container main .stats .instagram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to left, #DF4896, #EE877E, #FDC366);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+body .container main .stats .youtube {
+  border-top: solid #C4032B 5px;
+}
+body .container main .Overview-Today {
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+body .container main .overview {
+  display: flex;
+  gap: 68px;
+  flex-wrap: wrap;
+}
+body .container main .overview .card {
+  height: 125px;
+}
+body .container main .overview .card .overview-logo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+body .container main .overview .card .percentage {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+body .container main .overview .card .percentage .positive {
+  margin-top: 10px;
+  color: green;
+}
+body .container main .overview .card .percentage .negative {
+  margin-top: 10px;
+  color: red;
+}
+body .container main .overview .card .percentage .weigt-names {
+  font-size: 32px;
+  font-weight: 700;
+}
+body .container main .overview .first {
+  width: 100%;
+  display: flex;
+  gap: 68px;
+  margin-bottom: -30px;
+  flex-wrap: wrap;
+}
+body .container main .overview .second {
+  width: 100%;
+  display: flex;
+  gap: 68px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 375px) {
+  .container header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: -30px;
+  }
+  .container header .title {
+    border-bottom: solid #848BAB 1px;
+    width: 326px;
+    margin-left: 70px;
+    height: 80px;
+  }
+  .container header .title h1 {
+    font-size: 24px;
+  }
+  .container header .dark-mode-circle {
+    margin-left: 70px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.dark-mode {
+  background-color: #1D1F29;
+  color: #ffffff;
+}
+.dark-mode .container main .card {
+  background-color: #252B42;
+}
+.dark-mode .container main .card:hover {
+  background-color: #333A55;
+}
+.dark-mode .dark-name {
+  color: #8C98C6;
+}
+.dark-mode .weight-names {
+  color: #FFFFFF;
+}
+.dark-mode .background {
+  background-color: #20222F;
+}
+.dark-mode .container header .dark-mode-circle .dark-mode-text {
+  color: #FFFFFF;
+}
+.dark-mode .container header .switch .slider:before {
+  background-color: #252B42;
+}
+
+/*# sourceMappingURL=styles.css.map */
